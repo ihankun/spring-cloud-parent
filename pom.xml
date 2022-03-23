@@ -21,6 +21,7 @@
     <modules>
         <module>core-commons</module>
         <module>core-cache</module>
+        <module>core-db</module>
     </modules>
 
 
