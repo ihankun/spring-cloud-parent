@@ -23,6 +23,7 @@
         <module>core-cache</module>
         <module>core-db</module>
         <module>core-springcloud</module>
+        <module>core-log</module>
     </modules>
 
     <dependencyManagement>

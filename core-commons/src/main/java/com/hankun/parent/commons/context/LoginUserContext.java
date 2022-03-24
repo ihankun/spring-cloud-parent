@@ -26,4 +26,14 @@ public class LoginUserContext {
     public static void clear() {
         CONTEXT_HOLDER.remove();
     }
+
+    /**
+     * 模拟登录用户信息，测试使用
+     */
+    public static void mock(LoginUserInfo loginUserInfo) {
+        //将用户信息放入线程上下文，在Feign拦截器中，会尝试从线程上下文获取到用户信息并放入请求header
+        if (loginUserInfo != null) {
+            CONTEXT_HOLDER.set(loginUserInfo);
+        }
+    }
 }

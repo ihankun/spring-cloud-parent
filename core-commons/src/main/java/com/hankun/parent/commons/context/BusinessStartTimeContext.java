@@ -44,6 +44,15 @@ public class BusinessStartTimeContext {
         return DateUtil.getNowDate();
     }
 
+    /**
+     * 模拟域名信息，测试使用
+     */
+    public static void mock(String time) {
+        if (!StringUtils.isEmpty(time)) {
+            CONTEXT_HOLDER.set(time);
+        }
+    }
+
     public static void clear() {
         CONTEXT_HOLDER.remove();
     }

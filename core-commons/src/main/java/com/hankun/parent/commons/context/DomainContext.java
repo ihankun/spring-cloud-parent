@@ -26,6 +26,15 @@ public class DomainContext {
         return domain;
     }
 
+    /**
+     * 模拟域名信息，测试使用
+     */
+    public static void mock(String domain) {
+        if (!StringUtils.isEmpty(domain)) {
+            CONTEXT_HOLDER.set(domain);
+        }
+    }
+
     public static void clear() {
         CONTEXT_HOLDER.remove();
     }

@@ -1,9 +1,13 @@
 package com.hankun.parent.commons.api;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 
 import java.util.List;
 
+@AllArgsConstructor
+@Data
 public class BasePageVO<T> extends BaseEntity {
 
     @ApiModelProperty("总条数")
