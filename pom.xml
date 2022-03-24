@@ -22,6 +22,7 @@
         <module>core-commons</module>
         <module>core-cache</module>
         <module>core-db</module>
+        <module>core-springcloud</module>
     </modules>
 
     <dependencyManagement>
