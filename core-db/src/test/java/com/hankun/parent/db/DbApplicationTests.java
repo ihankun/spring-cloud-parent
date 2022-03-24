@@ -3,11 +3,11 @@ package com.hankun.parent.db;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class DbApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-}
+//@SpringBootTest
+//class DbApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}
