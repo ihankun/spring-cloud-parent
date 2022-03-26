@@ -38,12 +38,12 @@ public class BasePO extends BaseEntity {
     /**
      * 创建人id
      */
-    public Long createrId;
+    public Long sysCreaterId;
 
     /**
      * 创建人名称
      */
-    public String createrName;
+    public String sysCreaterName;
 
     /**
      * 创建时间
@@ -51,12 +51,17 @@ public class BasePO extends BaseEntity {
     @ApiModelProperty("创建时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date hisCreateTime;
+    private Date sysCreateTime;
 
     /**
      * 更新人id
      */
-    public Long hisUpdaterId;
+    public Long sysUpdaterId;
+
+    /**
+     * 更新人名称
+     */
+    public String sysUpdaterName;
 
     /**
      * 更新时间
@@ -64,7 +69,7 @@ public class BasePO extends BaseEntity {
     @ApiModelProperty("更新时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private Date hisUpdateTime;
+    private Date sysUpdateTime;
 
     /**
      * 乐观锁
