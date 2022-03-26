@@ -29,12 +29,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.util.regex.Pattern;
 
-@Configuration
-@EnableSwagger2
-@EnableKnife4j
+//@Configuration
+//@EnableSwagger2
+//@EnableKnife4j
 @Slf4j
-@Import(BeanValidatorPluginsConfiguration.class)
-@ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
+//@Import(BeanValidatorPluginsConfiguration.class)
+//@ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
 public class SwaggerConfiguration implements BeanFactoryPostProcessor, ApplicationContextAware {
 
     private ApplicationContext context;

@@ -21,7 +21,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-@Configuration
+//@Configuration
 public class FeignHystrixConcurrencyStrategy extends HystrixConcurrencyStrategy {
 
     private HystrixConcurrencyStrategy delegate;

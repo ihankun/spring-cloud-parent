@@ -13,8 +13,8 @@ import org.springframework.util.StringUtils;
 
 import java.util.Base64;
 
-@Configuration
-@ConditionalOnClass(FeignClient.class)
+//@Configuration
+//@ConditionalOnClass(FeignClient.class)
 @Slf4j
 public class FeignFilter implements RequestInterceptor {
 
