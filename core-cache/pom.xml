@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hankun.parent</groupId>
-    <artifactId>cache</artifactId>
+    <artifactId>core-cache</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <name>core-cache</name>
     <description>Demo project for Spring Boot</description>

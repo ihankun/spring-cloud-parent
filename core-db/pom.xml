@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hankun.parent</groupId>
-    <artifactId>db</artifactId>
+    <artifactId>core-db</artifactId>
     <version>0.0.2-SNAPSHOT</version>
     <name>core-db</name>
     <description>Demo project for Spring Boot</description>
