@@ -9,8 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.hankun.parent</groupId>
-    <artifactId>commons</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>core-commons</artifactId>
+    <version>0.0.2-SNAPSHOT</version>
     <name>core-commons</name>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
