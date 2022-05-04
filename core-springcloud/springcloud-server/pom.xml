@@ -11,6 +11,8 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
@@ -46,13 +48,13 @@
         </dependency>
         <dependency>
             <groupId>com.hankun.parent</groupId>
-            <artifactId>commons</artifactId>
+            <artifactId>core-commons</artifactId>
             <version>0.0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hankun.parent</groupId>
-            <artifactId>log</artifactId>
+            <artifactId>core-log</artifactId>
             <version>0.0.2-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
