@@ -1,6 +1,6 @@
 package com.hankun.parent.db.sql;
 
-import com.hankun.parent.db.config.DbConfig;
+import com.hankun.parent.db.config.KunDbConfig;
 import com.hankun.parent.db.exceptions.CommonDbException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.statement.RoutingStatementHandler;
@@ -26,7 +26,7 @@ import java.util.Properties;
 public class SqlLimitInterceptor implements Interceptor {
 
     @Resource
-    private DbConfig config;
+    private KunDbConfig config;
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {

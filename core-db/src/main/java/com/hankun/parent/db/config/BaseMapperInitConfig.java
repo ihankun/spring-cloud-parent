@@ -25,7 +25,7 @@ public class BaseMapperInitConfig implements ApplicationContextAware {
         if (CollectionUtils.isEmpty(mapperMap)) {
             return;
         }
-        log.info("MsunBaseMapperInitConfig耗时：{}ms", (System.currentTimeMillis() - start));
+        log.info("BaseMapperInitConfig耗时：{}ms", (System.currentTimeMillis() - start));
         mapperMap.forEach((k, v) -> v.getInstance(0L));
     }
 }

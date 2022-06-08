@@ -1,7 +1,7 @@
 package com.hankun.parent.db.sql;
 
 import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
-import com.hankun.parent.db.config.DbConfig;
+import com.hankun.parent.db.config.KunDbConfig;
 import com.hankun.parent.db.exceptions.CommonDbException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.statement.StatementHandler;
@@ -29,10 +29,10 @@ import java.util.Properties;
 })
 public class SqlUpdateInterceptor implements Interceptor {
 
-    public static final String UPDATE_TIME = "his_update_time";
+    public static final String UPDATE_TIME = "sys_update_time";
 
     @Resource
-    private DbConfig config;
+    private KunDbConfig config;
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
