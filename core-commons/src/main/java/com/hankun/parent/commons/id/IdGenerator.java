@@ -32,7 +32,7 @@ public class IdGenerator {
             Environment environment = context.getEnvironment();
             String applicationName = environment.getProperty("spring.application.name");
             if (!StringUtils.isEmpty(applicationName)) {
-                String serviceId = environment.getProperty("msun.service.id." + applicationName);
+                String serviceId = environment.getProperty("Kun.service.id." + applicationName);
                 if (!StringUtils.isEmpty(serviceId)) {
                     defaultGenerator = new SnowflakeUpperGenerator(Long.valueOf(serviceId));
                     log.info("IdGenerator.IdGenerator.reset,serviceId={}", serviceId);

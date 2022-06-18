@@ -30,6 +30,7 @@
         <module>core-log</module>
         <module>core-requestlock</module>
         <module>core-job</module>
+        <module>core-mq</module>
     </modules>
 
     <dependencyManagement>

@@ -29,7 +29,7 @@ public class RequestlockAutoConfiguration {
     @ConditionalOnMissingBean
     @Order
     @Bean
-    public CacheManager<String, String> msunRequestLockCacheManager() {
+    public CacheManager<String, String> KunRequestLockCacheManager() {
         return CacheBuilder.build(CacheType.REDIS);
     }
 
