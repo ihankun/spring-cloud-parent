@@ -31,6 +31,7 @@
         <module>core-requestlock</module>
         <module>core-job</module>
         <module>core-mq</module>
+        <module>core-nosql</module>
     </modules>
 
     <dependencyManagement>
