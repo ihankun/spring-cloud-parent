@@ -1,11 +1,14 @@
 package com.hankun.parent.commons.api;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.hankun.parent.commons.context.LoginUserContext;
+import com.hankun.parent.commons.context.LoginUserInfo;
 import com.hankun.parent.commons.optimistic.LockVersion;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -77,5 +80,62 @@ public class BasePO extends BaseEntity {
     @ApiModelProperty("乐观锁标识(更新、逻辑删除时必传)")
     @LockVersion
     public Integer version;
+
+    /**
+     * 设置更新信息
+     */
+    public void update() {
+        LoginUserInfo loginUser = getLoginUser();
+        this.sysUpdaterId = loginUser.getUserSysId();
+        this.sysUpdateTime = Calendar.getInstance().getTime();
+    }
+
+
+    /**
+     * 获取当前登录用户
+     *
+     * @return
+     */
+    protected LoginUserInfo getLoginUser() {
+        LoginUserInfo loginUserInfo = LoginUserContext.getLoginUserInfo();
+        if (loginUserInfo == null) {
+            loginUserInfo = new LoginUserInfo();
+            loginUserInfo.setUserId(DEFAULT_ID);
+            loginUserInfo.setUserName(DEFAULT_USER_NAME);
+            loginUserInfo.setUserSysId(DEFAULT_ID);
+            loginUserInfo.setOrgId(DEFAULT_ID);
+        }
+        return loginUserInfo;
+    }
+
+
+    /**
+     * 初始化创建、更新信息
+     */
+    public void init() {
+        LoginUserInfo loginUser = getLoginUser();
+        Long userId = loginUser.getUserSysId();
+        String userName = loginUser.getUserName();
+        this.sysCreateTime = Calendar.getInstance().getTime();
+        this.sysCreaterId = userId;
+        this.sysCreaterName = userName;
+        this.version = 0;
+        update();
+        autoSetOrgId();
+    }
+
+    /**
+     * 自动设置机构id
+     */
+    private void autoSetOrgId() {
+        LoginUserInfo loginUser = getLoginUser();
+        if (getOrgId() == null) {
+            if (loginUser.getOrgId() != null) {
+                this.orgId = loginUser.getOrgId();
+                return;
+            }
+            this.orgId = DEFAULT_ID;
+        }
+    }
 
 }
