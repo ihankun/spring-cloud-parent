@@ -10,10 +10,10 @@
     </parent>
     <groupId>com.hankun.parent</groupId>
     <artifactId>core-commons</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>core-commons</name>
     <packaging>jar</packaging>
-    <description>Demo project for Spring Boot</description>
+    <description></description>
 
     <properties>
         <java.version>1.8</java.version>

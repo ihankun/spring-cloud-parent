@@ -10,9 +10,9 @@
     </parent>
     <groupId>com.hankun.parent</groupId>
     <artifactId>core-requestlock</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <name>core-requestlock</name>
-    <description>Demo project for Spring Boot</description>
+    <description></description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -52,19 +52,19 @@
         <dependency>
             <groupId>com.hankun.parent</groupId>
             <artifactId>core-cache</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hankun.parent</groupId>
             <artifactId>core-commons</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.hankun.parent</groupId>
             <artifactId>springcloud-api</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
