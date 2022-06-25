@@ -2,11 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.hankun.parent.nosql</groupId>
+    <parent>
+        <groupId>com.hankun.core.nosql</groupId>
+        <artifactId>core-nosql</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.hankun.nosql</groupId>
     <artifactId>mongodb</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>nosql-mongodb</name>
-    <description>Demo project for Spring Boot</description>
+    <name>${project.artifactId}</name>
+    <packaging>jar</packaging>
+    <description>${project.artifactId}</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -20,32 +26,13 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-            <version>2.6.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
             <version>2.2.5.RELEASE</version>
         </dependency>
 
         <dependency>
-            <groupId>com.hankun.parent</groupId>
-            <artifactId>springcloud-server</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.hankun.parent</groupId>
+            <groupId>com.hankun.core.commons</groupId>
             <artifactId>core-commons</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -2,7 +2,7 @@ package com.hankun.parent.nosql.mongodb.config;
 
 import com.mongodb.WriteConcern;
 import lombok.Data;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -35,11 +35,11 @@ public class MongoConfiguration {
         }
 
         if (! msunMongoDatabase.contains(database)) {
-            throw new RuntimeException("数据库配置不存在！请联系技术中台！");
+            throw new RuntimeException("数据库配置不存在！");
         }
 
         uri = uri.replace("database", database);
-        return new SimpleMongoClientDbFactory(uri);
+        return (MongoDbFactory) new SimpleMongoClientDbFactory(uri);
     }
 
     @Primary

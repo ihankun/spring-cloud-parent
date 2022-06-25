@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.cache.CacheType;
 public class CacheConfigProperties {
 
     /**
-     * 缓存类型 REDIS？MEMORY
+     * 缓存类型 REDIS?MEMORY
      */
     private CacheType type;
 

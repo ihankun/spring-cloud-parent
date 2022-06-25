@@ -2,12 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.hankun.parent</groupId>
-    <artifactId>nosql</artifactId>
+    <parent>
+        <groupId>com.hankun.parent</groupId>
+        <artifactId>core-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <groupId>com.hankun.core.nosql</groupId>
+    <artifactId>core-nosql</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>core-nosql</name>
+    <name>${project.artifactId}</name>
     <packaging>pom</packaging>
-    <description></description>
+    <description>${project.artifactId}</description>
 
     <properties>
         <java.version>1.8</java.version>

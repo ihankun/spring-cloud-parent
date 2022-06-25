@@ -5,7 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.hankun.parent.commons.utils.SpringHelpers;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.lang.reflect.ParameterizedType;

@@ -1,4 +1,4 @@
-package com.hankun.parent.cache.core.impl;
+package com.hankun.parent.cache.core.impl.redis;
 
 import com.hankun.parent.cache.core.MapCache;
 import com.hankun.parent.cache.key.CacheKey;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @author hankun
  */
 @Slf4j
-public class MapCacheImpl <K, V> extends AbstractRedisCache implements MapCache<K, V> {
+public class RedisMapCacheImpl<K, V> extends AbstractRedisCache implements MapCache<K, V> {
 
     @Override
     public V getValue(CacheKey key, K mapKey) {
