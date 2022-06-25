@@ -3,16 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.4</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.hankun.parent</groupId>
+        <artifactId>core-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.parent</groupId>
+    <groupId>com.hankun.core.requestlock</groupId>
     <artifactId>core-requestlock</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
-    <name>core-requestlock</name>
-    <description>Demo project for Spring Boot</description>
+    <version>1.0.0-SNAPSHOT</version>
+    <name>${project.artifactId}</name>
+    <packaging>jar</packaging>
+    <description>${project.artifactId}</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -24,11 +24,6 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>org.mapstruct</groupId>-->
 <!--            <artifactId>mapstruct</artifactId>-->
@@ -50,26 +45,25 @@
             <version>20.0</version>
         </dependency>
         <dependency>
-            <groupId>com.hankun.parent</groupId>
-            <artifactId>core-cache</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.hankun.parent</groupId>
-            <artifactId>core-commons</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.hankun.parent</groupId>
-            <artifactId>springcloud-api</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hankun.core.commons</groupId>
+            <artifactId>core-commons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hankun.core.cache</groupId>
+            <artifactId>core-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hankun.core.cache</groupId>
+            <artifactId>core-cache</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.hankun.springcloud</groupId>
+            <artifactId>springcloud-api</artifactId>
         </dependency>
     </dependencies>
 

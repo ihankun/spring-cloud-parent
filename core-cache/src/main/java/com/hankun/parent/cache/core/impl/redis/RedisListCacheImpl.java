@@ -1,4 +1,4 @@
-package com.hankun.parent.cache.core.impl;
+package com.hankun.parent.cache.core.impl.redis;
 
 import com.hankun.parent.cache.core.ListCache;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @author hankun
  */
 @Slf4j
-public class ListCacheImpl<V> extends AbstractRedisCache implements ListCache<V> {
+public class RedisListCacheImpl<V> extends AbstractRedisCache implements ListCache<V> {
 
     @Override
     public List<V> pop(CacheKey key, int size) {

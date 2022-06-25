@@ -1,9 +1,9 @@
 package com.hankun.parent.cache;
 
-import com.hankun.parent.cache.core.impl.ListCacheImpl;
-import com.hankun.parent.cache.core.impl.MapCacheImpl;
-import com.hankun.parent.cache.core.impl.SetCacheImpl;
-import com.hankun.parent.cache.core.impl.StringCacheImpl;
+import com.hankun.parent.cache.core.impl.redis.RedisListCacheImpl;
+import com.hankun.parent.cache.core.impl.redis.RedisMapCacheImpl;
+import com.hankun.parent.cache.core.impl.redis.RedisSetCacheImpl;
+import com.hankun.parent.cache.core.impl.redis.RedisStringCacheImpl;
 import com.hankun.parent.cache.enums.CacheType;
 
 /**
@@ -11,10 +11,15 @@ import com.hankun.parent.cache.enums.CacheType;
  */
 public class CacheBuilder {
 
+    /**
+     * 构造不同类型的cache管理器
+     * @param type 类型
+     * @return CacheManager
+     */
     public static CacheManager build(CacheType type) {
         CacheManager manager = null;
         if (type.equals(CacheType.REDIS)) {
-            manager = new CacheManager(new StringCacheImpl(), new MapCacheImpl(), new ListCacheImpl(), new SetCacheImpl());
+            manager = new CacheManager(new RedisStringCacheImpl(), new RedisMapCacheImpl(), new RedisListCacheImpl(), new RedisSetCacheImpl());
         }
         return manager;
     }

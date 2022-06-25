@@ -56,7 +56,7 @@
 //
 //    @Override
 //    public String toString() {
-//        return "MsunThreadContextUtil{" +
+//        return "KunThreadContextUtil{" +
 //                "loginUserInfo=" + loginUserInfo +
 //                ", domain='" + domain + '\'' +
 //                ", businessTime='" + businessTime + '\'' +

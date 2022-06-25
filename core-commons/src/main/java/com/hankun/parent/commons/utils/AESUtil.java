@@ -16,7 +16,7 @@ public class AESUtil {
 
     private static final String KEY_ALGORITHM = "AES";
     private static final String DEFAULT_CIPHER_ALGORITHM = "AES/ECB/PKCS5Padding";
-    private static final String SALT_KEY= "PISMSUN"; //自定义密钥密码
+    private static final String SALT_KEY= "PISKun"; //自定义密钥密码
     private static final String ENCODING = "UTF-8";
     /**
      * 签名算法

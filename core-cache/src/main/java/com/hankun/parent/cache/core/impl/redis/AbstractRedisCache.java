@@ -1,4 +1,4 @@
-package com.hankun.parent.cache.core.impl;
+package com.hankun.parent.cache.core.impl.redis;
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.hankun.parent.commons.utils.SpringHelpers;

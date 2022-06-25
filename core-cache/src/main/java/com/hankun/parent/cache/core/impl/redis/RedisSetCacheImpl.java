@@ -1,4 +1,4 @@
-package com.hankun.parent.cache.core.impl;
+package com.hankun.parent.cache.core.impl.redis;
 
 import com.hankun.parent.cache.core.SetCache;
 import com.hankun.parent.cache.key.CacheKey;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author hankun
  */
 @Slf4j
-public class SetCacheImpl<V> extends AbstractRedisCache implements SetCache<V> {
+public class RedisSetCacheImpl<V> extends AbstractRedisCache implements SetCache<V> {
 
     @Override
     public List<String> pop(CacheKey key, int size) {

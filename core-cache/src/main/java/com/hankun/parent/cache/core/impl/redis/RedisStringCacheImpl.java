@@ -1,4 +1,4 @@
-package com.hankun.parent.cache.core.impl;
+package com.hankun.parent.cache.core.impl.redis;
 
 import com.hankun.parent.cache.core.StringCache;
 import com.hankun.parent.cache.key.CacheKey;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * @author hankun
  */
 @Slf4j
-public class StringCacheImpl extends AbstractRedisCache implements StringCache {
+public class RedisStringCacheImpl extends AbstractRedisCache implements StringCache {
 
     @Override
     public boolean save(CacheKey key, String value, Long expire) {

@@ -2,6 +2,11 @@ package com.hankun.parent.log.enums;
 
 import lombok.Getter;
 
+/**
+ * 日志类型
+ * @author hankun
+ */
+
 @Getter
 public enum LogTypeEnum {
 
