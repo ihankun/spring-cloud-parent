@@ -34,7 +34,7 @@ import java.util.concurrent.TimeUnit;
 @Data
 @Slf4j
 @Configuration
-@ConfigurationProperties(prefix = "kun")
+@ConfigurationProperties(prefix = "kun.mq")
 @ComponentScan(basePackageClasses = MqAutoConfiguration.class)
 public class MqAutoConfiguration implements ApplicationContextAware {
 
@@ -55,6 +55,8 @@ public class MqAutoConfiguration implements ApplicationContextAware {
 
     @PostConstruct
     public void initConsumer() {
+        log.info("MqAutoConfiguration.initConsumer.init");
+
         if (mq == null) {
             log.info("mq.config is null");
             return;
