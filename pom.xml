@@ -28,9 +28,9 @@
         <swagger-bootstrap-ui.version>1.7.2</swagger-bootstrap-ui.version>
         <commons-lang3.version>3.10</commons-lang3.version>
         <hutool-all.version>5.7.22</hutool-all.version>
-        <spring-cloud-context.version>2.2.2.RELEASE</spring-cloud-context.version>
+        <spring-cloud-context.version>3.1.1</spring-cloud-context.version>
         <jackson-databind.version>2.13.1</jackson-databind.version>
-        <spring-boot.version>2.5.4</spring-boot.version>
+        <spring-boot.version>2.6.4</spring-boot.version>
         <spring-boot-starter-web.version>2.6.4</spring-boot-starter-web.version>
         <guava.version>20.0</guava.version>
     </properties>
@@ -154,6 +154,13 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+            <version>${spring-boot.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
         </dependency>
 
     </dependencies>
