@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hankun.parent</groupId>
-        <artifactId>core-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>spring-cloud-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.core.requestlock</groupId>
-    <artifactId>core-requestlock</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.hankun.lib</groupId>
+    <artifactId>cloud-requestlock</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>${project.artifactId}</description>
@@ -49,12 +49,12 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hankun.core.commons</groupId>
-            <artifactId>core-commons</artifactId>
+            <groupId>com.hankun.lib</groupId>
+            <artifactId>cloud-commons</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hankun.core.cache</groupId>
-            <artifactId>core-cache</artifactId>
+            <groupId>com.hankun.lib</groupId>
+            <artifactId>cloud-cache</artifactId>
         </dependency>
         <dependency>
             <groupId>com.hankun.springcloud</groupId>

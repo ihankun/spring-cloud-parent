@@ -3,15 +3,15 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.hankun.parent</groupId>
-        <artifactId>core-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.hankun.lib</groupId>
+        <artifactId>cloud-springcloud</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.core.nosql</groupId>
-    <artifactId>core-nosql</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.hankun.springcloud</groupId>
+    <artifactId>springcloud-api</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <description>${project.artifactId}</description>
 
     <properties>
@@ -22,10 +22,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <modules>
-        <module>nosql-elasticsearch</module>
-        <module>nosql-mongodb</module>
-        <module>nosql-redis</module>
-    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>
