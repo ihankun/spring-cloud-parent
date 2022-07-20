@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.hankun.parent</groupId>
-        <artifactId>core-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <artifactId>spring-cloud-parent</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.core.cache</groupId>
-    <artifactId>core-cache</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <groupId>com.hankun.lib</groupId>
+    <artifactId>cloud-nosql</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <description>${project.artifactId}</description>
 
     <properties>
@@ -22,22 +22,10 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.redisson</groupId>
-            <artifactId>redisson</artifactId>
-            <version>3.17.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-            <version>2.6.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.hankun.core.commons</groupId>
-            <artifactId>core-commons</artifactId>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>nosql-elasticsearch</module>
+        <module>nosql-mongodb</module>
+        <module>nosql-redis</module>
+    </modules>
 
 </project>

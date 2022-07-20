@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.hankun.core.nosql</groupId>
-        <artifactId>core-nosql</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <groupId>com.hankun.lib</groupId>
+        <artifactId>cloud-nosql</artifactId>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     <groupId>com.hankun.nosql</groupId>
     <artifactId>elasticsearch</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>${project.artifactId}</description>

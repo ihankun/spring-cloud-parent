@@ -8,9 +8,9 @@
         <version>2.6.4</version>
     </parent>
     <groupId>com.hankun.parent</groupId>
-    <artifactId>core-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-    <name>core-parent</name>
+    <artifactId>spring-cloud-parent</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <name>${project.artifactId}</name>
     <packaging>pom</packaging>
     <description>hankun parent pom</description>
 
@@ -36,15 +36,15 @@
     </properties>
 
     <modules>
-        <module>core-commons</module>
-        <module>core-cache</module>
-        <module>core-db</module>
-        <module>core-springcloud</module>
-        <module>core-log</module>
-        <module>core-requestlock</module>
-        <module>core-job</module>
-        <module>core-mq</module>
-        <module>core-nosql</module>
+        <module>cloud-cache</module>
+        <module>cloud-commons</module>
+        <module>cloud-db</module>
+        <module>cloud-job</module>
+        <module>cloud-log</module>
+        <module>cloud-mq</module>
+        <module>cloud-nosql</module>
+        <module>cloud-requestlock</module>
+        <module>cloud-springcloud</module>
     </modules>
 
     <dependencies>
@@ -168,59 +168,61 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.hankun.core.commons</groupId>
-                <artifactId>core-commons</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-cache</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.core.cache</groupId>
-                <artifactId>core-cache</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-commons</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.core.db</groupId>
-                <artifactId>core-db</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-db</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.core.springcloud</groupId>
-                <artifactId>core-springcloud</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-job</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-log</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-springcloud</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.hankun.springcloud</groupId>
                 <artifactId>springcloud-api</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
                 <groupId>com.hankun.springcloud</groupId>
                 <artifactId>springcloud-server</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-requestlock</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-mq</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.core.log</groupId>
-                <artifactId>core-log</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hankun.core.requestlock</groupId>
-                <artifactId>core-requestlock</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hankun.core.job</groupId>
-                <artifactId>core-job</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hankun.core.mq</groupId>
-                <artifactId>core-mq</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>com.hankun.core.nosql</groupId>
-                <artifactId>core-nosql</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
+                <groupId>com.hankun.lib</groupId>
+                <artifactId>cloud-nosql</artifactId>
+                <version>1.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
