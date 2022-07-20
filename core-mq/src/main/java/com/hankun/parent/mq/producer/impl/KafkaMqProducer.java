@@ -9,7 +9,7 @@ import com.hankun.parent.mq.producer.KunMqSendCallback;
 import com.hankun.parent.mq.producer.KunTopic;
 import com.hankun.parent.mq.producer.MqProducer;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 

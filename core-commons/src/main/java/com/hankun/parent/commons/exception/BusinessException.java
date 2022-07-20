@@ -25,6 +25,15 @@ public class BusinessException extends RuntimeException {
     /**
      * 根据错误code、错误信息构造业务异常
      *
+     * @param message
+     */
+    public static BusinessException build(String message, String... params) {
+        return new BusinessException("common", "common", executeMsg(message, params), params);
+    }
+
+    /**
+     * 根据错误code、错误信息构造业务异常
+     *
      * @param errorCode
      */
     public static BusinessException build(IErrorCode errorCode, String... params) {
