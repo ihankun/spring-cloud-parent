@@ -23,9 +23,9 @@
     </properties>
 
     <modules>
-        <module>nosql-elasticsearch</module>
-        <module>nosql-mongodb</module>
-        <module>nosql-redis</module>
+        <module>elasticsearch</module>
+        <module>mongodb</module>
+        <module>redis</module>
     </modules>
 
 </project>

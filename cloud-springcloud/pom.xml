@@ -22,13 +22,16 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
-
-    </dependencies>
-
     <modules>
         <module>springcloud-api</module>
         <module>springcloud-server</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+    </dependencies>
 
 </project>

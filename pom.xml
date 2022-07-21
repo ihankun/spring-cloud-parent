@@ -7,6 +7,7 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.6.4</version>
     </parent>
+
     <groupId>com.hankun.parent</groupId>
     <artifactId>spring-cloud-parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
@@ -29,10 +30,18 @@
         <commons-lang3.version>3.10</commons-lang3.version>
         <hutool-all.version>5.7.22</hutool-all.version>
         <spring-cloud-context.version>3.1.1</spring-cloud-context.version>
-        <jackson-databind.version>2.13.1</jackson-databind.version>
         <spring-boot.version>2.6.4</spring-boot.version>
         <spring-boot-starter-web.version>2.6.4</spring-boot-starter-web.version>
         <guava.version>20.0</guava.version>
+        <spring-boot-starter-data-redis.version>2.6.4</spring-boot-starter-data-redis.version>
+        <alibaba-nacos.version>2021.0.1.0</alibaba-nacos.version>
+        <pagehelper.version>5.3.0</pagehelper.version>
+        <mapstruct.version>1.3.0.Final</mapstruct.version>
+        <jackson-core.version>2.13.1</jackson-core.version>
+        <jackson-databind.version>2.13.1</jackson-databind.version>
+        <jackson-annotations.version>2.13.1</jackson-annotations.version>
+        <jackson-datatype.version>2.13.1</jackson-datatype.version>
+        <commons-collections.version>4.1</commons-collections.version>
     </properties>
 
     <modules>
@@ -100,6 +109,11 @@
             <version>${commons-lang3.version}</version>
         </dependency>
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${commons-collections.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
@@ -146,15 +160,36 @@
             <version>${hutool-all.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson-core.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-databind.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson-annotations.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson-datatype.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-dependencies</artifactId>
@@ -167,6 +202,39 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${alibaba-nacos.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${alibaba-nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+                <version>${mapstruct.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-processor</artifactId>
+                <version>${mapstruct.version}</version>
+                <scope>provided</scope>
+            </dependency>
+
             <dependency>
                 <groupId>com.hankun.lib</groupId>
                 <artifactId>cloud-cache</artifactId>
@@ -207,13 +275,11 @@
                 <artifactId>springcloud-server</artifactId>
                 <version>1.0.1-SNAPSHOT</version>
             </dependency>
-
             <dependency>
                 <groupId>com.hankun.lib</groupId>
                 <artifactId>cloud-requestlock</artifactId>
                 <version>1.0.1-SNAPSHOT</version>
             </dependency>
-
             <dependency>
                 <groupId>com.hankun.lib</groupId>
                 <artifactId>cloud-mq</artifactId>
