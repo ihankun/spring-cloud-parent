@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.hankun.lib</groupId>
+        <groupId>com.hankun.parent</groupId>
         <artifactId>cloud-nosql</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.nosql</groupId>
-    <artifactId>elasticsearch</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+
+    <artifactId>redis</artifactId>
+    <version>1.0.2-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>${project.artifactId}</description>
@@ -24,21 +24,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.elasticsearch</groupId>
-            <artifactId>elasticsearch</artifactId>
-            <version>6.8.1</version>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.elasticsearch.client</groupId>
-            <artifactId>elasticsearch-rest-high-level-client</artifactId>
-            <version>6.8.1</version>
-        </dependency>
-
-        <!--        <dependency>-->
-<!--            <groupId>org.zxp</groupId>-->
-<!--            <artifactId>esclientrhl</artifactId>-->
-<!--            <version>6.0.0</version>-->
-<!--        </dependency>-->
     </dependencies>
 
 </project>

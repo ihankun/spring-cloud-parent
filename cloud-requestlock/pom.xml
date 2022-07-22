@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.hankun.parent</groupId>
         <artifactId>spring-cloud-parent</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
-    <groupId>com.hankun.lib</groupId>
+
     <artifactId>cloud-requestlock</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>${project.artifactId}</description>
@@ -31,17 +31,10 @@
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
-            <version>1.3.0.Final</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
-            <version>1.3.0.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>20.0</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
@@ -49,15 +42,15 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hankun.lib</groupId>
+            <groupId>com.hankun.parent</groupId>
             <artifactId>cloud-commons</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hankun.lib</groupId>
+            <groupId>com.hankun.parent</groupId>
             <artifactId>cloud-cache</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hankun.springcloud</groupId>
+            <groupId>com.hankun.parent</groupId>
             <artifactId>springcloud-api</artifactId>
         </dependency>
     </dependencies>
