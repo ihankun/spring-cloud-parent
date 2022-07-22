@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.hankun.lib</groupId>
+        <groupId>com.hankun.parent</groupId>
         <artifactId>cloud-springcloud</artifactId>
-        <version>1.0.1-SNAPSHOT</version>
+        <version>1.0.2-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.hankun.springcloud</groupId>
+    <groupId>com.hankun.parent</groupId>
     <artifactId>springcloud-server</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
     <description>${project.artifactId}</description>
@@ -125,11 +125,11 @@
         </dependency>
 
         <dependency>
-            <groupId>com.hankun.lib</groupId>
+            <groupId>com.hankun.parent</groupId>
             <artifactId>cloud-commons</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.hankun.lib</groupId>
+            <groupId>com.hankun.parent</groupId>
             <artifactId>cloud-log</artifactId>
         </dependency>
     </dependencies>

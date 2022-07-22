@@ -10,7 +10,7 @@
 
     <groupId>com.hankun.parent</groupId>
     <artifactId>spring-cloud-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.2-SNAPSHOT</version>
     <name>${project.artifactId}</name>
     <packaging>pom</packaging>
     <description>hankun parent pom</description>
@@ -101,7 +101,6 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
-            <version>${commons-pool2.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -203,11 +202,6 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-data-redis</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
                 <version>${alibaba-nacos.version}</version>
@@ -236,59 +230,59 @@
             </dependency>
 
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-cache</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-commons</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-db</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-job</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-log</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-springcloud</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.springcloud</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>springcloud-api</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.springcloud</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>springcloud-server</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-requestlock</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-mq</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>com.hankun.lib</groupId>
+                <groupId>com.hankun.parent</groupId>
                 <artifactId>cloud-nosql</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.2-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
