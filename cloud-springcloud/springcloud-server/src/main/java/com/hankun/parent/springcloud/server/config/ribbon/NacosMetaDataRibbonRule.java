@@ -23,9 +23,9 @@
 //import java.util.List;
 //
 //@Slf4j
-////@Component
-////@Scope(value = "prototype")
-////@ConditionalOnClass(NacosDiscoveryProperties.class)
+//@Component
+//@Scope(value = "prototype")
+//@ConditionalOnClass(NacosDiscoveryProperties.class)
 //public class NacosMetaDataRibbonRule extends AbstractLoadBalancerRule {
 //
 //    @Resource
