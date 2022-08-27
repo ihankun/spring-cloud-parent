@@ -9,6 +9,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.Random;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class IdGenerator {
 

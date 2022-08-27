@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.error;
 
+/**
+ * @author hankun
+ */
 public interface IErrorCode {
 
     /**

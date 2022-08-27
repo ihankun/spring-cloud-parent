@@ -6,6 +6,9 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 @AllArgsConstructor
 @Data
 public class BasePageVO<T> extends BaseEntity {

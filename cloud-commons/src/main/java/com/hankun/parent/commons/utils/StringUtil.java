@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.utils;
 
+/**
+ * @author hankun
+ */
 public class StringUtil {
 
     private static final String EMPTY_STRING = "";

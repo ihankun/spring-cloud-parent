@@ -11,6 +11,9 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class AESUtil {
 

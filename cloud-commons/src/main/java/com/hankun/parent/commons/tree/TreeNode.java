@@ -7,6 +7,9 @@ import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author hankun
+ */
 @ApiModel
 @Data
 public class TreeNode implements Serializable {

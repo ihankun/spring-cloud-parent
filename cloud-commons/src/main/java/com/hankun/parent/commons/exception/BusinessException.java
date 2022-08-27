@@ -6,6 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.regex.Matcher;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 @Data
 public class BusinessException extends RuntimeException {

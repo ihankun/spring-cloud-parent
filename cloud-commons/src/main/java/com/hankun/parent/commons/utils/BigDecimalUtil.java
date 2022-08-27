@@ -2,6 +2,9 @@ package com.hankun.parent.commons.utils;
 
 import java.math.BigDecimal;
 
+/**
+ * @author hankun
+ */
 public class BigDecimalUtil {
 
     /**

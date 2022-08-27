@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 @Component
 public class MemoryCacheThreadManager implements ApplicationContextAware {

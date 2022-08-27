@@ -7,6 +7,9 @@ import java.sql.Clob;
 import java.sql.SQLException;
 import java.util.*;
 
+/**
+ * @author hankun
+ */
 public class XmlUtil {
 
     private static String[] TEXT_FIELD= {"REPORT_USER_PIC","CHECK_USER_PIC"};

@@ -2,6 +2,9 @@ package com.hankun.parent.commons.id;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class BusinessCodeGenerator {
 
