@@ -5,6 +5,9 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.Base64;
 
+/**
+ * @author hankun
+ */
 public class ImageUtil {
 
     public static String imageToBase64(String imagePath){

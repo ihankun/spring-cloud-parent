@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.utils;
 
+/**
+ * @author hankun
+ */
 public class ServerStateUtil {
 
     private static final String GRAY_MARK = "kun_gray";

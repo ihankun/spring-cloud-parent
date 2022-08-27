@@ -10,6 +10,9 @@ import org.springframework.util.StringUtils;
 import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class JwtTokenUtil {
 

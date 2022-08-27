@@ -3,6 +3,9 @@ package com.hankun.parent.commons.api;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+/**
+ * @author hankun
+ */
 @Data
 public class BasePageReq extends BaseReq {
 

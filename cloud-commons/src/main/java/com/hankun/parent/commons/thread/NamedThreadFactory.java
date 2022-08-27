@@ -2,6 +2,9 @@ package com.hankun.parent.commons.thread;
 
 import java.util.concurrent.ThreadFactory;
 
+/**
+ * @author hankun
+ */
 public class NamedThreadFactory implements ThreadFactory {
 
     private String name;

@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.remote;
 
+/**
+ * @author hankun
+ */
 public interface RemoteCallBack<T> {
 
     /**

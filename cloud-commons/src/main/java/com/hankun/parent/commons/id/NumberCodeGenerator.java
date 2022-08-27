@@ -4,6 +4,9 @@ import cn.hutool.core.util.RandomUtil;
 import com.hankun.parent.commons.utils.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author hankun
+ */
 @Slf4j
 public class NumberCodeGenerator {
 

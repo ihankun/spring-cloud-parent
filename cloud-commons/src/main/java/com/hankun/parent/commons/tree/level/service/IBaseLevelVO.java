@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.tree.level.service;
 
+/**
+ * @author hankun
+ */
 public interface IBaseLevelVO {
 
     /**

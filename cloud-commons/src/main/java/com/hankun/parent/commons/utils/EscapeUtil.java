@@ -1,5 +1,8 @@
 package com.hankun.parent.commons.utils;
 
+/**
+ * @author hankun
+ */
 public class EscapeUtil {
 
     public static String escape(String src) {
