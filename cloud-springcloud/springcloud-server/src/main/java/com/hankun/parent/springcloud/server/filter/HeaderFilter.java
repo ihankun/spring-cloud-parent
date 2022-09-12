@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Base64;
 
-//@Configuration
+@Configuration
 @Slf4j
-//@Order(value = Ordered.HIGHEST_PRECEDENCE)
+@Order(value = Ordered.HIGHEST_PRECEDENCE)
 public class HeaderFilter implements WebMvcConfigurer {
 
     Base64.Decoder decoder = Base64.getDecoder();

@@ -1,7 +1,7 @@
 package com.hankun.parent.log.context;
 
+import com.hankun.parent.log.entity.ApiInfo;
 import org.springframework.core.NamedThreadLocal;
-import springfox.documentation.service.ApiInfo;
 
 /**
  * @author hankun

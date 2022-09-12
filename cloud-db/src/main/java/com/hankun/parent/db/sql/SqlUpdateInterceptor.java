@@ -94,6 +94,6 @@ public class SqlUpdateInterceptor implements Interceptor {
 
     @Override
     public void setProperties(Properties properties) {
-        Interceptor.super.setProperties(properties);
+        //Interceptor.super.setProperties(properties);
     }
 }

@@ -27,9 +27,9 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.TimeZone;
 
-//@EnableWebMvc
-//@Configuration
-//@Order(Integer.MIN_VALUE)
+@EnableWebMvc
+@Configuration
+@Order(Integer.MIN_VALUE)
 public class WebMvcConfiguration implements WebMvcConfigurer {
 
     private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";

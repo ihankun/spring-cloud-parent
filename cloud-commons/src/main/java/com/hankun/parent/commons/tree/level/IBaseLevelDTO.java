@@ -1,4 +1,4 @@
-package com.hankun.parent.commons.tree.level.service;
+package com.hankun.parent.commons.tree.level;
 
 /**
  * @author hankun

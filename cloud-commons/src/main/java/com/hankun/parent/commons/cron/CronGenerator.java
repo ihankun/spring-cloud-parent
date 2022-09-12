@@ -6,6 +6,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.*;
 
+/**
+ * @author hankun
+ */
 public class CronGenerator {
 
     private final String expression;

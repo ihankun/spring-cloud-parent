@@ -21,7 +21,9 @@ import java.util.Properties;
 @Component
 @Slf4j
 @Intercepts({
-        @Signature(type = StatementHandler.class, method = "query", args = {Statement.class, ResultHandler.class})
+        @Signature(type = StatementHandler.class,
+                method = "query",
+                args = {Statement.class, ResultHandler.class})
 })
 public class SqlLimitInterceptor implements Interceptor {
 
@@ -70,6 +72,6 @@ public class SqlLimitInterceptor implements Interceptor {
 
     @Override
     public void setProperties(Properties properties) {
-        Interceptor.super.setProperties(properties);
+        //Interceptor.super.setProperties(properties);
     }
 }

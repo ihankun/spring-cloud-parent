@@ -14,6 +14,8 @@ import java.io.Serializable;
 @Slf4j
 public class BaseEntity implements Serializable {
 
+    private static final long serialVersionUID = 3441090872456352378L;
+
     public String toJson(){
         return JSON.toJSONString(this);
     }

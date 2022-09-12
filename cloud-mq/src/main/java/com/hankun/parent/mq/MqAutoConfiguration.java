@@ -19,6 +19,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.util.CollectionUtils;
 
 import javax.annotation.PostConstruct;
@@ -34,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 @Data
 @Slf4j
 @Configuration
-@ConfigurationProperties(prefix = "kun.mq")
+@ConfigurationProperties(prefix = "kun")
 @ComponentScan(basePackageClasses = MqAutoConfiguration.class)
 public class MqAutoConfiguration implements ApplicationContextAware {
 
@@ -55,8 +56,6 @@ public class MqAutoConfiguration implements ApplicationContextAware {
 
     @PostConstruct
     public void initConsumer() {
-        log.info("MqAutoConfiguration.initConsumer.init");
-
         if (mq == null) {
             log.info("mq.config is null");
             return;
@@ -70,17 +69,11 @@ public class MqAutoConfiguration implements ApplicationContextAware {
 
         //开启定时扫描任务
         new NamedThreadFactory("mq.consumer.scan").newThread(() -> {
-            int time = 0;
             while (true) {
                 try {
                     scanConsumerListener();
                 } catch (Exception e) {
                     log.error(e.getMessage(), e);
-                }
-                time++;
-                if (time >= UPDATE_TIME) {
-                    updateNacos();
-                    time = 0;
                 }
                 try {
                     TimeUnit.SECONDS.sleep(1);
@@ -126,6 +119,7 @@ public class MqAutoConfiguration implements ApplicationContextAware {
     }
 
     @Bean
+    @Lazy
     public MqProducer getMqProducer() {
 
         if (mq == null) {

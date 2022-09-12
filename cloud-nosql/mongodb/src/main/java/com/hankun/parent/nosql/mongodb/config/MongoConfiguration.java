@@ -1,7 +1,9 @@
 package com.hankun.parent.nosql.mongodb.config;
 
+import com.hankun.parent.nosql.mongodb.properties.AccountConfigProperties;
 import com.mongodb.WriteConcern;
 import lombok.Data;
+import lombok.Setter;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -13,20 +15,29 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.SimpleMongoClientDbFactory;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * @author hankun
  */
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "spring.data.mongodb")
+@ConfigurationProperties(prefix = "kun.mongodb")
 public class MongoConfiguration {
 
+    private static final String URI_PREFIX = "mongodb://";
+    private static final String COLON = ":";
+    private static final String SEPARATOR = "@";
+
+    @Value("${msun.mongodb.uri}")
     private String uri;
+
+    @Value("${spring.data.mongodb.database}")
     private String database;
 
-    @Value("#{'${kun.mongodb.database}'.split(',')}")
-    private List<String> msunMongoDatabase;
+    @Setter
+    private Map<String, AccountConfigProperties> config;
 
     @Bean
     MongoDbFactory mongoDbFactory() {
@@ -34,8 +45,15 @@ public class MongoConfiguration {
             throw new RuntimeException("请配置spring.data.mongodb.database");
         }
 
-        if (! msunMongoDatabase.contains(database)) {
-            throw new RuntimeException("数据库配置不存在！");
+        AccountConfigProperties accountProperties = config.get(database);
+        if (Objects.isNull(accountProperties)) {
+            throw new RuntimeException("数据库配置不存在！请联系技术中台！");
+        }
+
+        if (StringUtils.isNotBlank(accountProperties.getUsername())) {
+            uri = URI_PREFIX + accountProperties.getUsername() + COLON + accountProperties.getPassword() + SEPARATOR + uri;
+        } else {
+            uri = URI_PREFIX + uri;
         }
 
         uri = uri.replace("database", database);

@@ -1,4 +1,4 @@
-package com.hankun.parent.commons.optimistic;
+package com.hankun.parent.commons.optimistic.annotation;
 
 import java.lang.annotation.*;
 

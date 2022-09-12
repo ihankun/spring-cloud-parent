@@ -19,6 +19,8 @@ import java.io.Serializable;
 @Data
 public class ResponseResult<T> implements Serializable {
 
+    private static final long serialVersionUID = -5858147992383769655L;
+
     @ApiModelProperty("标记是否成功")
     private boolean success;
 

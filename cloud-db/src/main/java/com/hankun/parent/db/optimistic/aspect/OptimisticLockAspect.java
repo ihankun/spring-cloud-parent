@@ -1,10 +1,10 @@
 package com.hankun.parent.db.optimistic.aspect;
 
 import com.hankun.parent.commons.exception.BusinessException;
-import com.hankun.parent.commons.optimistic.Lock;
-import com.hankun.parent.commons.optimistic.LockId;
-import com.hankun.parent.commons.optimistic.LockParam;
-import com.hankun.parent.commons.optimistic.LockVersion;
+import com.hankun.parent.commons.optimistic.annotation.Lock;
+import com.hankun.parent.commons.optimistic.annotation.LockId;
+import com.hankun.parent.commons.optimistic.annotation.LockParam;
+import com.hankun.parent.commons.optimistic.annotation.LockVersion;
 import com.hankun.parent.db.error.CommonDbErrorCode;
 import com.hankun.parent.db.optimistic.dao.OptimisticLockMapper;
 import lombok.Getter;
@@ -42,7 +42,7 @@ public class OptimisticLockAspect {
     @Resource
     private OptimisticLockMapper lockService;
 
-    @Pointcut("@annotation(com.hankun.parent.commons.optimistic.Lock)")
+    @Pointcut("@annotation(com.hankun.parent.commons.optimistic.annotation.Lock)")
     public void lockPointcut() {
 
     }

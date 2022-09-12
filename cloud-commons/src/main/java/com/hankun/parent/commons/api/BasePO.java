@@ -3,7 +3,7 @@ package com.hankun.parent.commons.api;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.hankun.parent.commons.context.LoginUserContext;
 import com.hankun.parent.commons.context.LoginUserInfo;
-import com.hankun.parent.commons.optimistic.LockVersion;
+import com.hankun.parent.commons.optimistic.annotation.LockVersion;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
